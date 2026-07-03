@@ -119,7 +119,9 @@
                 submitBtn.disabled = true;
 
                 // Send the data via a POST request
-                fetch(scriptURL, { method: 'POST', body: new FormData(visitorForm) })
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    body: new URLSearchParams(new FormData(visitorForm) })
                     .then(response => {
                         alert('Thank you! Your Visitor Connect Card has been submitted successfully.');
                         visitorForm.reset(); // Clear the form fields
