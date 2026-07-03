@@ -4,150 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>West Village Christian Church</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fafafa;
-            color: #333333;
-            line-height: 1.6;
-        }
-        input, textarea, button {
-            font-family: inherit;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- HERO / WELCOME BANNER -->
-    <header style="background-color: #1e293b; color: white; padding: 70px 20px; text-align: center; border-bottom: 4px solid #556b2f;">
-        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; color: #a3e635; font-weight: bold; margin-bottom: 5px;">
-            West Village Christian Church
-        </p>
-        <h1 style="font-size: 2.6rem; margin: 0 auto 15px auto; max-width: 750px; font-weight: 700; line-height: 1.2;">
-            Rooted in Faith. Driven by Missions.
-        </h1>
-        <p style="font-size: 1.1rem; max-width: 650px; margin: 0 auto; font-style: italic; opacity: 0.8;">
-            "Love one another. By this everyone will know that you are my disciples..." — John 13:34
-        </p>
+    <header class="hero-banner">
+        <p class="hero-subtitle">West Village Christian Church</p>
+        <h1 class="hero-title">Rooted in Faith. Driven by Missions.</h1>
+        <p class="hero-verse">"Love one another. By this everyone will know that you are my disciples..." — John 13:34</p>
     </header>
 
-    <!-- PASTORAL SEARCH ANNOUNCEMENT -->
-    <section id="pastoral-search" style="max-width: 800px; margin: 40px auto; padding: 25px; background-color: #f4f7fa; border-left: 5px solid #2b4c7e; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-        <h2 style="color: #2b4c7e; margin-top: 0;">We Are Seeking a Full-Time Pastor</h2>
+    <section id="pastoral-search" class="search-box">
+        <h2>We Are Seeking a Full-Time Pastor</h2>
         <p>
             West Village Christian Church is prayerfully seeking a faithful, community-focused, full-time Pastor to lead our congregation into its next chapter of ministry. 
         </p>
         <p style="font-weight: bold; margin-bottom: 5px;">How to Apply:</p>
         <p style="margin-top: 0;">
             Interested candidates are invited to submit a cover letter and resume via email to: 
-            <a href="mailto:westvillageor@gmail.com" style="color: #2b4c7e; font-weight: bold; text-decoration: underline;">westvillageor@gmail.com</a>
+            <a href="mailto:westvillageor@gmail.com" class="search-email">westvillageor@gmail.com</a>
         </p>
     </section>
 
-    <!-- MISSION-MINDED CHURCH SPOTLIGHT -->
-    <section id="missions" style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #333; border-bottom: 2px solid #556b2f; padding-bottom: 10px;">A Mission-Minded Fellowship</h2>
-        <p style="font-size: 1.1rem; color: #555;">
-            At West Village, we believe the Gospel isn't just something we hear on Sunday—it's something we live out every day. We are deeply committed to being a mission-minded church, serving our local neighbors and expanding our reach globally to share the love of Christ.
+    <section id="vision-mission" class="content-section">
+        <h2 class="section-title">Our Vision & Mission</h2>
+        <p class="section-text">
+            <strong>Our Vision:</strong> "A new command I give you: 'Love one another. As I have loved you, so you must love one another. By this everyone will know that you are my disciples if you love one another.'" <em>(John 13:34-35)</em>
+        </p>
+        <p class="section-text" style="margin-bottom: 5px;"><strong>Our Mission of loving God and others is to:</strong></p>
+        <ul style="padding-left: 20px; color: #555; font-size: 1.05rem; line-height: 1.8;">
+            <li>Bring people into a loving, real relationship with God through teaching and worship.</li>
+            <li>Help people find and fulfill their purpose in life and service to God.</li>
+            <li>Make the love of God tangible to our community through loving service.</li>
+            <li>Train and equip our church family for service and witness.</li>
+        </ul>
+    </section>
+
+    <section id="missions" class="content-section">
+        <h2 class="section-title">A Mission-Minded Fellowship</h2>
+        <p class="section-text">
+            At West Village, we believe the Great Commission is a call to action. We are deeply committed to being a mission-minded church, actively backing works that spread the Gospel and provide vital humanitarian aid locally and globally.
         </p>
         
-        <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 25px;">
-            <!-- Global Missions Card -->
-            <div style="flex: 1; min-width: 280px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-                <h3 style="color: #556b2f; margin-top: 0;">🌍 Global Impact: Zimbabwe</h3>
-                <p style="line-height: 1.5; color: #666; margin-bottom: 0;">
-                    Our congregation actively supports the international spreading of the Word and humanitarian aid. Most recently, our church family stepped out in faith to support a mission to <strong>Zimbabwe</strong>, bringing resources, physical aid, and the hope of Jesus to local communities.
-                </p>
+        <div class="cards-container">
+            <div class="card-column">
+                <div class="mission-card">
+                    <h3 class="card-title-global">🌍 Global Impact</h3>
+                    <p style="line-height: 1.6; color: #666; margin-bottom: 0; font-size: 0.95rem;">
+                        Our global reach spans vital international ministries including healthcare, education, and planting churches. We actively support missions such as <strong>White Fields Overseas Evangelism</strong>, <strong>Cambodian Christian Arts</strong>, <strong>CMF International</strong>, and our recent project works in <strong>Zimbabwe</strong>.
+                    </p>
+                </div>
             </div>
 
-            <!-- Placeholder for Additional Missions -->
-            <div style="flex: 1; min-width: 280px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #fff; border-style: dashed;">
-                <h3 style="color: #777; margin-top: 0;">🤝 Community & Outreach</h3>
-                <p style="line-height: 1.5; color: #777; font-style: italic; margin-bottom: 0;">
-                    [We will drop the details of your other local and regional missions right here as soon as you gather them from the pastor!]
-                </p>
+            <div class="card-column">
+                <div class="mission-card">
+                    <h3 class="card-title-global">🤝 Community & Higher Ed</h3>
+                    <p style="line-height: 1.6; color: #666; margin-bottom: 0; font-size: 0.95rem;">
+                        We believe in sowing into our backyard and equipping the next generation. Locally, we partner with the <strong>Willing Workers Food Pantry</strong>, <strong>Clinch River Habitat for Humanity</strong>, <strong>UT Campus Ministry</strong>, and support Christian higher education at <strong>Johnson & Milligan Universities</strong>.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <hr style="max-width: 800px; margin: 50px auto; border: 0; border-top: 1px solid #e0e0e0;">
-
-    <!-- FORMS CONTAINER -->
-    <div style="max-width: 840px; margin: 0 auto 60px auto; display: flex; gap: 40px; flex-wrap: wrap; padding: 0 20px;">
-        
-        <!-- VISITOR CONNECT CARD -->
-        <section id="connect-card" style="flex: 1; min-width: 340px; padding: 25px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-            <h2 style="color: #2b4c7e; margin-top: 0;">Visitor Connect Card</h2>
-            <p style="color: #666; font-size: 0.95rem;">We are so glad you visited West Village! Let us know how we can serve you.</p>
-            
-            <form id="visitorForm">
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">Full Name *</label>
-                    <input type="text" name="fullName" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;">
+    <section id="leadership" class="content-section">
+        <h2 class="section-title">Church Leadership</h2>
+        <div class="cards-container" style="margin-top: 15px;">
+            <div class="card-column" style="width: 100%;">
+                <div class="mission-card" style="min-height: auto; padding: 15px 20px;">
+                    <h3 class="card-title-local" style="margin-bottom: 10px; color: #2b4c7e;">Elders</h3>
+                    <p style="margin: 0; font-size: 1.1rem; letter-spacing: 0.5px; color: #444;">
+                        <strong>David Poe</strong> &nbsp;|&nbsp; <strong>Eddie Bailiff</strong> &nbsp;|&nbsp; <strong>Joe Inman</strong>
+                    </p>
+                    <p id="deacons-placeholder" style="margin: 10px 0 0 0; font-style: italic; color: #888; font-size: 0.9rem;">
+                        [Deacons and Secretary additions coming soon]
+                    </p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">Email Address *</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;">
-                </div>
+    <hr class="section-divider">
 
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">Phone Number</label>
-                    <input type="tel" name="phone" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;">
-                </div>
+    <div class="forms-wrapper">
+        <div class="form-column">
+            <section id="connect-card" class="form-card">
+                <h2 class="visitor-title">Visitor Connect Card</h2>
+                <p class="form-description">We are so glad you visited West Village! Let us know how we can serve you.</p>
+                <form id="visitorForm">
+                    <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
+                    <div class="form-group"><label>Email Address *</label><input type="email" name="email" required class="form-control"></div>
+                    <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
+                    <div class="form-group"><label>How did you hear about us?</label><input type="text" name="heardAboutUs" placeholder="Friend, flyer, social media, etc." class="form-control"></div>
+                    <div class="form-group"><label>Comments or Questions</label><textarea name="comments" rows="4" class="form-control"></textarea></div>
+                    <button type="submit" class="btn btn-primary">Submit Connect Card</button>
+                </form>
+            </section>
+        </div>
 
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">How did you hear about us?</label>
-                    <input type="text" name="heardAboutUs" placeholder="Friend, flyer, social media, etc." style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">Comments or Questions</label>
-                    <textarea name="comments" rows="4" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
-                </div>
-
-                <button type="submit" style="background-color: #2b4c7e; color: white; padding: 12px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%;">
-                    Submit Connect Card
-                </button>
-            </form>
-        </section>
-
-        <!-- PRAYER REQUEST FORM -->
-        <section id="prayer-requests" style="flex: 1; min-width: 340px; padding: 25px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
-            <h2 style="color: #556b2f; margin-top: 0;">Prayer Request Box</h2>
-            <p style="color: #666; font-size: 0.95rem;">How can our church family pray for you this week?</p>
-            
-            <form id="prayerForm">
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">Your Name (Optional)</label>
-                    <input type="text" name="prayerName" placeholder="Leave blank to remain anonymous" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">Contact Email / Phone (Optional)</label>
-                    <input type="text" name="prayerContact" placeholder="If you'd like follow up" style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px;">Your Prayer Request *</label>
-                    <textarea name="prayerRequest" required rows="4" placeholder="Share your burden or praise report..." style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; resize: vertical;"></textarea>
-                </div>
-
-                <div style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-                    <input type="checkbox" name="isConfidential" id="confidential" style="margin-top: 3px; margin-right: 10px; cursor: pointer;">
-                    <label for="confidential" style="font-size: 0.9rem; cursor: pointer; user-select: none;">
-                        <strong>Keep this confidential.</strong> (Only share with the Pastor and Elders, do not share publicly.)
-                    </label>
-                </div>
-
-                <button type="submit" style="background-color: #556b2f; color: white; padding: 12px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; width: 100%;">
-                    Submit Prayer Request
-                </button>
-            </form>
-        </section>
-
+        <div class="form-column">
+            <section id="prayer-requests" class="form-card">
+                <h2 class="prayer-title">Prayer Request Box</h2>
+                <p class="form-description">How can our church family pray for you this week?</p>
+                <form id="prayerForm">
+                    <div class="form-group"><label>Your Name (Optional)</label><input type="text" name="prayerName" placeholder="Leave blank to remain anonymous" class="form-control"></div>
+                    <div class="form-group"><label>Contact Email / Phone (Optional)</label><input type="text" name="prayerContact" placeholder="If you'd like follow up" class="form-control"></div>
+                    <div class="form-group"><label>Your Prayer Request *</label><textarea name="prayerRequest" required rows="4" placeholder="Share your burden or praise report..." class="form-control"></textarea></div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="isConfidential" id="confidential" class="checkbox-input">
+                        <label for="confidential" class="checkbox-label"><strong>Keep this confidential.</strong> (Only share with Pastor/Elders)</label>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
+                </form>
+            </section>
+        </div>
     </div>
 
 </body>
