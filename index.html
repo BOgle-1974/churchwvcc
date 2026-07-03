@@ -16,14 +16,9 @@
 
     <section id="pastoral-search" class="search-box">
         <h2>We Are Seeking a Full-Time Pastor</h2>
-        <p>
-            West Village Christian Church is prayerfully seeking a faithful, community-focused, full-time Pastor to lead our congregation into its next chapter of ministry. 
-        </p>
+        <p>West Village Christian Church is prayerfully seeking a faithful, community-focused, full-time Pastor to lead our congregation into its next chapter of ministry.</p>
         <p style="font-weight: bold; margin-bottom: 5px;">How to Apply:</p>
-        <p style="margin-top: 0;">
-            Interested candidates are invited to submit a cover letter and resume via email to: 
-            <a href="mailto:westvillageor@gmail.com" class="search-email">westvillageor@gmail.com</a>
-        </p>
+        <p style="margin-top: 0;">Interested candidates are invited to submit a cover letter and resume via email to: <a href="mailto:westvillageor@gmail.com" class="search-email">westvillageor@gmail.com</a></p>
     </section>
 
     <section id="vision-mission" class="content-section">
@@ -31,164 +26,61 @@
         <p class="section-text">
             <strong>Our Vision:</strong> "A new command I give you: 'Love one another. As I have loved you, so you must love one another. By this everyone will know that you are my disciples if you love one another.'" <em>(John 13:34-35)</em>
         </p>
-        <p class="section-text" style="margin-bottom: 5px;"><strong>Our Mission of loving God and others is to:</strong></p>
-        <ul style="padding-left: 20px; color: #555; font-size: 1.05rem; line-height: 1.8;">
-            <li>Bring people into a loving, real relationship with God through teaching and worship.</li>
-            <li>Help people find and fulfill their purpose in life and service to God.</li>
-            <li>Make the love of God tangible to our community through loving service.</li>
-            <li>Train and equip our church family for service and witness.</li>
-        </ul>
     </section>
-
-    <section id="missions" class="content-section">
-        <h2 class="section-title">A Mission-Minded Fellowship</h2>
-        <p class="section-text">
-            At West Village, we believe the Great Commission is a call to action. We are deeply committed to being a mission-minded church, actively backing works that spread the Gospel and provide vital humanitarian aid locally and globally.
-        </p>
-        
-        <div class="cards-container">
-            <div class="card-column">
-                <div class="mission-card">
-                    <h3 class="card-title-global">🌍 Global Impact</h3>
-                    <p style="line-height: 1.6; color: #666; margin-bottom: 0; font-size: 0.95rem;">
-                        Our global reach spans vital international ministries including healthcare, education, and planting churches. We actively support missions such as <strong>White Fields Overseas Evangelism</strong>, <strong>Cambodian Christian Arts</strong>, <strong>CMF International</strong>, and our recent project works in <strong>Zimbabwe</strong>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="card-column">
-                <div class="mission-card">
-                    <h3 class="card-title-global">🤝 Community & Higher Ed</h3>
-                    <p style="line-height: 1.6; color: #666; margin-bottom: 0; font-size: 0.95rem;">
-                        We believe in sowing into our backyard and equipping the next generation. Locally, we partner with the <strong>Willing Workers Food Pantry</strong>, <strong>Clinch River Habitat for Humanity</strong>, <strong>UT Campus Ministry</strong>, and support Christian higher education at <strong>Johnson & Milligan Universities</strong>.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="leadership" class="content-section">
-        <h2 class="section-title">Church Leadership</h2>
-        <div class="cards-container" style="margin-top: 15px;">
-            <div class="card-column" style="width: 100%;">
-                <div class="mission-card" style="min-height: auto; padding: 15px 20px;">
-                    <h3 class="card-title-local" style="margin-bottom: 10px; color: #2b4c7e;">Elders</h3>
-                    <p style="margin: 0; font-size: 1.1rem; letter-spacing: 0.5px; color: #444;">
-                        <strong>David Poe</strong> &nbsp;|&nbsp; <strong>Eddie Bailiff</strong> &nbsp;|&nbsp; <strong>Joe Inman</strong>
-                    </p>
-                    <p id="deacons-placeholder" style="margin: 10px 0 0 0; font-style: italic; color: #888; font-size: 0.9rem;">
-                        [Deacons and Secretary additions coming soon]
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <hr class="section-divider">
 
     <div class="forms-wrapper">
+        <!-- Visitor Form -->
         <div class="form-column">
             <section id="connect-card" class="form-card">
                 <h2 class="visitor-title">Visitor Connect Card</h2>
-                <p class="form-description">We are so glad you visited West Village! Let us know how we can serve you.</p>
                 <form id="visitorForm">
                     <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
                     <div class="form-group"><label>Email Address *</label><input type="email" name="email" required class="form-control"></div>
                     <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
-                    <div class="form-group"><label>How did you hear about us?</label><input type="text" name="heardAboutUs" placeholder="Friend, flyer, social media, etc." class="form-control"></div>
-                    <div class="form-group"><label>Comments or Questions</label><textarea name="comments" rows="4" class="form-control"></textarea></div>
                     <button type="submit" class="btn btn-primary">Submit Connect Card</button>
                 </form>
             </section>
         </div>
 
-        <script>
-        // 1. Paste your Google Apps Script Web App URL here:
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwWIPNYx1uz7HCm94xG1UYI4w-oT8CgmfNOLudPdt0sDs8PEdNmjOPk0krivomIpAAgIA/exec';
-
-        // 2. Handle the Visitor Connect Form Submission
-        const visitorForm = document.getElementById('visitorForm');
-        if (visitorForm) {
-            visitorForm.addEventListener('submit', e => {
-                e.preventDefault(); // Stop the page from reloading
-                
-                // Change button text to show it's working
-                const submitBtn = visitorForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerText;
-                submitBtn.innerText = 'Sending...';
-                submitBtn.disabled = true;
-
-                // Send the data via a POST request
-                fetch(scriptURL, { 
-                    method: 'POST', 
-                    body: new URLSearchParams(new FormData(visitorForm) })
-                    .then(response => {
-                        alert('Thank you! Your Visitor Connect Card has been submitted successfully.');
-                        visitorForm.reset(); // Clear the form fields
-                    })
-                    .catch(error => {
-                        console.error('Error!', error.message);
-                        alert('Something went wrong. Please try submitting again.');
-                    })
-                    .finally(() => {
-                        // Reset button state
-                        submitBtn.innerText = originalText;
-                        submitBtn.disabled = false;
-                    });
-            });
-        }
-
-        // 3. Handle the Prayer Request Form Submission
-        const prayerForm = document.getElementById('prayerForm');
-        if (prayerForm) {
-            prayerForm.addEventListener('submit', e => {
-                e.preventDefault(); // Stop the page from reloading
-                
-                // Change button text to show it's working
-                const submitBtn = prayerForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerText;
-                submitBtn.innerText = 'Submitting Request...';
-                submitBtn.disabled = true;
-
-                // Send the data via a POST request
-                fetch(scriptURL, { method: 'POST', body: new FormData(prayerForm) })
-                    .then(response => {
-                        alert('Your prayer request has been received. Our church family will be praying for you.');
-                        prayerForm.reset(); // Clear the form fields
-                    })
-                    .catch(error => {
-                        console.error('Error!', error.message);
-                        alert('Something went wrong. Please try submitting again.');
-                    })
-                    .finally(() => {
-                        // Reset button state
-                        submitBtn.innerText = originalText;
-                        submitBtn.disabled = false;
-                    });
-            });
-        }
-    </script>
-</body>
-</html>
-
+        <!-- Prayer Form -->
         <div class="form-column">
             <section id="prayer-requests" class="form-card">
                 <h2 class="prayer-title">Prayer Request Box</h2>
-                <p class="form-description">How can our church family pray for you this week?</p>
                 <form id="prayerForm">
-                    <div class="form-group"><label>Your Name (Optional)</label><input type="text" name="prayerName" placeholder="Leave blank to remain anonymous" class="form-control"></div>
-                    <div class="form-group"><label>Contact Email / Phone (Optional)</label><input type="text" name="prayerContact" placeholder="If you'd like follow up" class="form-control"></div>
-                    <div class="form-group"><label>Your Prayer Request *</label><textarea name="prayerRequest" required rows="4" placeholder="Share your burden or praise report..." class="form-control"></textarea></div>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="isConfidential" id="confidential" class="checkbox-input">
-                        <label for="confidential" class="checkbox-label"><strong>Keep this confidential.</strong> (Only share with Pastor/Elders)</label>
-                        <div style="clear: both;"></div>
-                    </div>
+                    <div class="form-group"><label>Your Request *</label><textarea name="prayerRequest" required class="form-control"></textarea></div>
                     <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
                 </form>
             </section>
         </div>
     </div>
 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwWIPNYx1uz7HCm94xG1UYI4w-oT8CgmfNOLudPdt0sDs8PEdNmjOPk0krivomIpAAgIA/exec';
+
+        function setupForm(formId, successMsg) {
+            const form = document.getElementById(formId);
+            if (!form) return;
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.disabled = true;
+                btn.innerText = 'Sending...';
+
+                fetch(scriptURL, { method: 'POST', body: new URLSearchParams(new FormData(form)) })
+                .then(() => {
+                    alert(successMsg);
+                    form.reset();
+                })
+                .catch(() => alert('Something went wrong.'))
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.innerText = formId === 'visitorForm' ? 'Submit Connect Card' : 'Submit Prayer Request';
+                });
+            });
+        }
+
+        setupForm('visitorForm', 'Thank you! Your submission has been received.');
+        setupForm('prayerForm', 'Your prayer request has been received.');
+    </script>
 </body>
 </html>
