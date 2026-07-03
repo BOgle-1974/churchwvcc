@@ -102,6 +102,73 @@
             </section>
         </div>
 
+        <script>
+        // 1. Paste your Google Apps Script Web App URL here:
+        const scriptURL = 'YOUR_WEB_APP_URL_HERE';
+
+        // 2. Handle the Visitor Connect Form Submission
+        const visitorForm = document.getElementById('visitorForm');
+        if (visitorForm) {
+            visitorForm.addEventListener('submit', e => {
+                e.preventDefault(); // Stop the page from reloading
+                
+                // Change button text to show it's working
+                const submitBtn = visitorForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Sending...';
+                submitBtn.disabled = true;
+
+                // Send the data via a POST request
+                fetch(scriptURL, { method: 'POST', body: new FormData(visitorForm) })
+                    .then(response => {
+                        alert('Thank you! Your Visitor Connect Card has been submitted successfully.');
+                        visitorForm.reset(); // Clear the form fields
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        alert('Something went wrong. Please try submitting again.');
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitBtn.innerText = originalText;
+                        submitBtn.disabled = false;
+                    });
+            });
+        }
+
+        // 3. Handle the Prayer Request Form Submission
+        const prayerForm = document.getElementById('prayerForm');
+        if (prayerForm) {
+            prayerForm.addEventListener('submit', e => {
+                e.preventDefault(); // Stop the page from reloading
+                
+                // Change button text to show it's working
+                const submitBtn = prayerForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Submitting Request...';
+                submitBtn.disabled = true;
+
+                // Send the data via a POST request
+                fetch(scriptURL, { method: 'POST', body: new FormData(prayerForm) })
+                    .then(response => {
+                        alert('Your prayer request has been received. Our church family will be praying for you.');
+                        prayerForm.reset(); // Clear the form fields
+                    })
+                    .catch(error => {
+                        console.error('Error!', error.message);
+                        alert('Something went wrong. Please try submitting again.');
+                    })
+                    .finally(() => {
+                        // Reset button state
+                        submitBtn.innerText = originalText;
+                        submitBtn.disabled = false;
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
+
         <div class="form-column">
             <section id="prayer-requests" class="form-card">
                 <h2 class="prayer-title">Prayer Request Box</h2>
