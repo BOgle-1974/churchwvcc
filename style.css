@@ -1,0 +1,226 @@
+/* --- Global Reset & Typography --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+input, textarea, button {
+    font-family: inherit;
+}
+
+/* --- Hero Banner Section --- */
+.hero-banner {
+    background-color: #1e293b; 
+    color: white; 
+    padding: 70px 20px; 
+    text-align: center; 
+    border-bottom: 4px solid #556b2f;
+}
+
+.hero-subtitle {
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    font-size: 0.9rem; 
+    color: #a3e635; 
+    font-weight: bold; 
+    margin-bottom: 5px;
+}
+
+.hero-title {
+    font-size: 2.6rem; 
+    margin: 0 auto 15px auto; 
+    max-width: 750px; 
+    font-weight: 700; 
+    line-height: 1.2;
+}
+
+.hero-verse {
+    font-size: 1.1rem; 
+    max-width: 650px; 
+    margin: 0 auto; 
+    font-style: italic; 
+    opacity: 0.8;
+}
+
+/* --- Content Sections (General) --- */
+.content-section {
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 0 20px;
+}
+
+.section-title {
+    color: #333; 
+    border-bottom: 2px solid #556b2f; 
+    padding-bottom: 10px;
+}
+
+.section-text {
+    font-size: 1.1rem; 
+    color: #555;
+}
+
+/* --- Pastoral Search Box --- */
+.search-box {
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 25px; 
+    background-color: #f4f7fa; 
+    border-left: 5px solid #2b4c7e; 
+    border-radius: 4px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-box h2 {
+    color: #2b4c7e; 
+    margin-top: 0;
+}
+
+.search-email {
+    color: #2b4c7e; 
+    font-weight: bold; 
+    text-decoration: underline;
+}
+
+/* --- Cards Container Layout --- */
+.cards-container {
+    display: table;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.card-column {
+    display: table-cell;
+    width: 50%;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.card-column:last-child {
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+.mission-card {
+    padding: 20px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px; 
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    min-height: 140px;
+}
+
+.mission-card.placeholder {
+    border-style: dashed;
+    background-color: transparent;
+}
+
+.mission-card h3 {
+    margin-top: 0;
+}
+
+.card-title-global { color: #556b2f; }
+.card-title-local { color: #777; }
+.text-muted { color: #777; font-style: italic; }
+
+.section-divider {
+    max-width: 800px; 
+    margin: 50px auto; 
+    border: 0; 
+    border-top: 1px solid #e0e0e0;
+}
+
+/* --- Forms Side-by-Side Container --- */
+.forms-wrapper {
+    max-width: 840px; 
+    margin: 0 auto 60px auto; 
+    display: table;
+    width: 100%;
+}
+
+.form-column {
+    display: table-cell;
+    width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.form-card {
+    padding: 25px; 
+    background-color: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.form-card h2 {
+    margin-top: 0;
+}
+
+.visitor-title { color: #2b4c7e; }
+.prayer-title { color: #556b2f; }
+
+.form-description {
+    color: #666; 
+    font-size: 0.95rem;
+}
+
+/* --- Form Fields --- */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block; 
+    font-weight: bold; 
+    font-size: 0.9rem; 
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.checkbox-container {
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    font-size: 0.9rem; 
+    cursor: pointer; 
+    user-select: none;
+}
+
+.checkbox-input {
+    margin-top: 3px; 
+    margin-right: 10px; 
+    cursor: pointer; 
+    float: left;
+}
+
+/* --- Form Action Buttons --- */
+.btn {
+    padding: 12px 20px; 
+    border: none; 
+    border-radius: 4px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    width: 100%;
+    color: white;
+}
+
+.btn-primary { background-color: #2b4c7e; }
+.btn-secondary { background-color: #556b2f; }
