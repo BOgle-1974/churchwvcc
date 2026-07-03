@@ -11,47 +11,25 @@
     <header class="hero-banner">
         <p class="hero-subtitle">West Village Christian Church</p>
         <h1 class="hero-title">Rooted in Faith. Driven by Missions.</h1>
-        <p class="hero-verse">"Love one another. By this everyone will know that you are my disciples..." — John 13:34</p>
     </header>
 
-    <section id="pastoral-search" class="search-box">
-        <h2>We Are Seeking a Full-Time Pastor</h2>
-        <p>West Village Christian Church is prayerfully seeking a faithful, community-focused, full-time Pastor to lead our congregation into its next chapter of ministry.</p>
-        <p style="font-weight: bold; margin-bottom: 5px;">How to Apply:</p>
-        <p style="margin-top: 0;">Interested candidates are invited to submit a cover letter and resume via email to: <a href="mailto:westvillageor@gmail.com" class="search-email">westvillageor@gmail.com</a></p>
-    </section>
-
-    <section id="vision-mission" class="content-section">
-        <h2 class="section-title">Our Vision & Mission</h2>
-        <p class="section-text">
-            <strong>Our Vision:</strong> "A new command I give you: 'Love one another. As I have loved you, so you must love one another. By this everyone will know that you are my disciples if you love one another.'" <em>(John 13:34-35)</em>
-        </p>
-    </section>
-
     <div class="forms-wrapper">
-        <!-- Visitor Form -->
-        <div class="form-column">
-            <section id="connect-card" class="form-card">
-                <h2 class="visitor-title">Visitor Connect Card</h2>
-                <form id="visitorForm">
-                    <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
-                    <div class="form-group"><label>Email Address *</label><input type="email" name="email" required class="form-control"></div>
-                    <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
-                    <button type="submit" class="btn btn-primary">Submit Connect Card</button>
-                </form>
-            </section>
-        </div>
+        <section id="connect-card" class="form-card">
+            <h2>Visitor Connect Card</h2>
+            <form id="visitorForm">
+                <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
+                <div class="form-group"><label>Email Address *</label><input type="email" name="email" required class="form-control"></div>
+                <button type="submit" class="btn btn-primary">Submit Connect Card</button>
+            </form>
+        </section>
 
-        <!-- Prayer Form -->
-        <div class="form-column">
-            <section id="prayer-requests" class="form-card">
-                <h2 class="prayer-title">Prayer Request Box</h2>
-                <form id="prayerForm">
-                    <div class="form-group"><label>Your Request *</label><textarea name="prayerRequest" required class="form-control"></textarea></div>
-                    <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
-                </form>
-            </section>
-        </div>
+        <section id="prayer-requests" class="form-card">
+            <h2>Prayer Request Box</h2>
+            <form id="prayerForm">
+                <div class="form-group"><label>Your Request *</label><textarea name="prayerRequest" required class="form-control"></textarea></div>
+                <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
+            </form>
+        </section>
     </div>
 
     <script>
@@ -66,12 +44,15 @@
                 btn.disabled = true;
                 btn.innerText = 'Sending...';
 
-                fetch(scriptURL, { method: 'POST', body: new URLSearchParams(new FormData(form)) })
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    body: new URLSearchParams(new FormData(form)) 
+                })
                 .then(() => {
                     alert(successMsg);
                     form.reset();
                 })
-                .catch(() => alert('Something went wrong.'))
+                .catch(err => alert('Error! Please try again.'))
                 .finally(() => {
                     btn.disabled = false;
                     btn.innerText = formId === 'visitorForm' ? 'Submit Connect Card' : 'Submit Prayer Request';
