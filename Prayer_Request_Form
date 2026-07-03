@@ -1,0 +1,31 @@
+<!-- PRAYER REQUEST FORM -->
+<section id="prayer-requests" style="max-width: 500px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+    <h2>Prayer Request Box</h2>
+    <p>How can our church family pray for you this week?</p>
+    
+    <form id="prayerForm">
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; font-weight: bold;">Your Name (Optional)</label>
+            <input type="text" name="prayerName" placeholder="Leave blank to remain anonymous" style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; font-weight: bold;">Contact Email / Phone (Optional)</label>
+            <input type="text" name="prayerContact" placeholder="If you'd like the pastor to follow up" style="width: 100%; padding: 8px; box-sizing: border-box;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; font-weight: bold;">Your Prayer Request *</label>
+            <textarea name="prayerRequest" required rows="5" placeholder="Share your burden or praise report..." style="width: 100%; padding: 8px; box-sizing: border-box;"></textarea>
+        </div>
+
+        <div style="margin-bottom: 15px; display: flex; align-items: flex-start;">
+            <input type="checkbox" name="isConfidential" id="confidential" style="margin-top: 4px; margin-right: 10px;">
+            <label for="confidential"><strong>Keep this confidential.</strong> (Only share with the Pastor and Elders, do not share publicly.)</label>
+        </div>
+
+        <button type="submit" style="background-color: #556b2f; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+            Submit Prayer Request
+        </button>
+    </form>
+</section>
