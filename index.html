@@ -18,14 +18,13 @@
             <section id="connect-card" class="form-card">
                 <h2 class="visitor-title">Visitor Connect Card</h2>
                 <form id="visitorForm">
-                    <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" name="fullName" required class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Email Address *</label>
-                        <input type="email" name="email" required class="form-control">
-                    </div>
+                    <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
+                    <div class="form-group"><label>Email Address *</label><input type="email" name="email" required class="form-control"></div>
+                    <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
+                    <div class="form-group"><label>Is this your first time visiting?</label><select name="isFirstTime" class="form-control"><option value="Yes">Yes</option><option value="No">No</option></select></div>
+                    <div class="form-group"><label>How did you hear about us?</label><input type="text" name="howHeard" class="form-control"></div>
+                    <div class="form-group"><label>Preferred Contact Method</label><select name="contactMethod" class="form-control"><option value="Email">Email</option><option value="Phone">Phone</option></select></div>
+                    <div class="form-group"><label>Comments or Questions</label><textarea name="comments" class="form-control"></textarea></div>
                     <button type="submit" class="btn btn-primary">Submit Connect Card</button>
                 </form>
             </section>
@@ -36,9 +35,16 @@
             <section id="prayer-requests" class="form-card">
                 <h2 class="prayer-title">Prayer Request Box</h2>
                 <form id="prayerForm">
+                    <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
+                    <div class="form-group"><label>Email Address *</label><input type="email" name="email" required class="form-control"></div>
+                    <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
+                    <div class="form-group"><label>Prayer Request or Praise *</label><textarea name="prayerRequest" required class="form-control" rows="3"></textarea></div>
                     <div class="form-group">
-                        <label>Your Request *</label>
-                        <textarea name="prayerRequest" required class="form-control" rows="4"></textarea>
+                        <label>Keep this request private? (Pastor/Leadership only)</label>
+                        <select name="isPrivate" class="form-control">
+                            <option value="No">No</option>
+                            <option value="Yes">Yes</option>
+                        </select>
                     </div>
                     <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
                 </form>
@@ -47,7 +53,6 @@
     </div>
 
     <script>
-        // Update this URL to match your active deployment URL
         const scriptURL = 'https://script.google.com/macros/s/AKfycbx71tGeQlOQrt2J-1Jw78pNKQvId1vzcK3IgcCKI26LAGqEDRNHy8MykL2cn2_1KSFO_A/exec';
 
         function handleFormSubmit(formId) {
@@ -75,7 +80,6 @@
             });
         }
 
-        // Initialize both forms
         handleFormSubmit('visitorForm');
         handleFormSubmit('prayerForm');
     </script>
