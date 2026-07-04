@@ -29,4 +29,33 @@
         </section>
     </div>
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwNteGi9lGPRvz-6K-0RtB6L0VOvUoZYFFwdbqz
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxr0zmScs9LpoeLOaPNqmeb2MTM_5m4Z2Rtm258CZfWQHBpwYGhXiUbvuPvSQRiB_1x/exec';
+        function setupForm(formId, successMsg) {
+            const form = document.getElementById(formId);
+            if (!form) return;
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                btn.disabled = true;
+                btn.innerText = 'Sending...';
+                fetch(scriptURL, { 
+                    method: 'POST', 
+                    mode: 'no-cors',
+                    body: new URLSearchParams(new FormData(form)) 
+                })
+                .then(() => {
+                    alert(successMsg);
+                    form.reset();
+                })
+                .catch(err => alert('Error! Please try again.'))
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.innerText = formId === 'visitorForm' ? 'Submit Connect Card' : 'Submit Prayer Request';
+                });
+            });
+        }
+        setupForm('visitorForm', 'Thank you! Your submission has been received.');
+        setupForm('prayerForm', 'Your prayer request has been received.');
+    </script>
+</body>
+</html>
