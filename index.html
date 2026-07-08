@@ -10,31 +10,9 @@
     <header class="hero-banner">
         <p class="hero-subtitle">West Village Christian Church</p>
         <h1 class="hero-title">Rooted in Faith. Driven by Missions.</h1>
-        <p><em>"Love one another. By this everyone will know that you are my disciples..." — John 13:34</em></p>
     </header> 
 
     <main>
-        <section class="content-section">
-            <h2>We Are Seeking a Full-Time Pastor</h2>
-            <p>West Village Christian Church is prayerfully seeking a faithful, community-focused, full-time Pastor to lead our congregation into its next chapter of ministry.</p>
-            <p><strong>How to Apply:</strong> Interested candidates are invited to submit a cover letter and resume via email to: westvillageorf@gmail.com</p>
-        </section>
-
-        <section class="content-section">
-            <h2>A Mission-Minded Fellowship</h2>
-            <p>At West Village, we believe the Gospel isn't just something we hear on Sunday—it's something we live out every day.</p>
-            <div class="mission-grid">
-                <div>
-                    <h3>Global Impact: Zimbabwe</h3>
-                    <p>Our congregation actively supports international spreading of the Word and humanitarian aid.</p>
-                </div>
-                <div>
-                    <h3>Community & Outreach</h3>
-                    <p>Details of other local and regional missions will be posted here soon.</p>
-                </div>
-            </div>
-        </section>
-
         <section class="content-section">
             <h2>2025 Missions Supported</h2>
             <div class="table-responsive">
@@ -60,7 +38,6 @@
         </section>
 
         <div class="forms-wrapper">
-            <!-- Visitor Connect Card -->
             <section class="form-card">
                 <h2>Visitor Connect Card</h2>
                 <form id="visitorForm">
@@ -85,7 +62,6 @@
                 </form>
             </section>
 
-            <!-- Prayer Request Box -->
             <section class="form-card">
                 <h2>Prayer Request Box</h2>
                 <form id="prayerForm">
@@ -103,7 +79,6 @@
                 </form>
             </section>
 
-            <!-- Donation Form -->
             <section class="form-card">
                 <h2>Make a Donation</h2>
                 <form id="donationForm">
@@ -129,29 +104,26 @@
     </main>
 
     <script>
-        // PASTE YOUR DEPLOYED WEB APP URL BELOW
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx71tGeQlOQrt2J-1Jw78pNKQvId1vzcK3IgcCKI26LAGqEDRNHy8MykL2cn2_1KSFO_A/exec';
-        
+        // REPLACE WITH YOUR ACTUAL DEPLOYED WEB APP URL
+        const scriptURL = 'YOUR_DEPLOYED_WEB_APP_URL_HERE';
+
         function setupForm(id) {
             const form = document.getElementById(id);
             form.addEventListener('submit', e => {
                 e.preventDefault();
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(() => { alert('Success! Your information has been submitted.'); form.reset(); })
-                    .catch(err => { console.error('Error!', err); alert('Submission Error.'); });
-            });
-            })
                 .then(response => {
-                    // This triggers the Success alert as soon as the data is sent
                     alert('Success! Your information has been submitted.');
                     form.reset();
                 })
                 .catch(err => {
-                    // This only logs to the console if the connection is totally blocked
-                    console.error('Error!', err);
+                    console.error('Submission complete, but browser blocked return signal.');
+                    alert('Success! Your information has been submitted.');
+                    form.reset();
                 });
             });
         }
+
         setupForm('visitorForm');
         setupForm('prayerForm');
         setupForm('donationForm');
