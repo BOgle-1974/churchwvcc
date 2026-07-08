@@ -140,6 +140,17 @@
                     .then(() => { alert('Success! Your information has been submitted.'); form.reset(); })
                     .catch(err => { console.error('Error!', err); alert('Submission Error.'); });
             });
+            })
+                .then(response => {
+                    // This triggers the Success alert as soon as the data is sent
+                    alert('Success! Your information has been submitted.');
+                    form.reset();
+                })
+                .catch(err => {
+                    // This only logs to the console if the connection is totally blocked
+                    console.error('Error!', err);
+                });
+            });
         }
         setupForm('visitorForm');
         setupForm('prayerForm');
