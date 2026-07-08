@@ -7,30 +7,45 @@
     <link rel="stylesheet" href="style.css">
 </head> 
 <body>
+    <!-- Header/Hero Section -->
     <header class="hero-banner">
-        <p class="hero-subtitle">West Village Christian Church</p>
+        <p class="hero-subtitle">WEST VILLAGE CHRISTIAN CHURCH</p>
         <h1 class="hero-title">Rooted in Faith. Driven by Missions.</h1>
         <p><em>"Love one another. By this everyone will know that you are my disciples..." — John 13:34</em></p>
     </header> 
 
     <main>
+        <!-- Pastor Search Section -->
         <section class="content-section">
             <h2>We Are Seeking a Full-Time Pastor</h2>
             <p>West Village Christian Church is prayerfully seeking a faithful, community-focused, full-time Pastor to lead our congregation into its next chapter of ministry.</p>
             <p><strong>How to Apply:</strong> Interested candidates are invited to submit a cover letter and resume via email to: westvillageorf@gmail.com</p>
         </section>
 
+        <!-- Mission-Minded Fellowship Section -->
+        <section class="content-section">
+            <h2>A Mission-Minded Fellowship</h2>
+            <p>At West Village, we believe the Gospel isn't just something we hear on Sunday—it's something we live out every day. We are deeply committed to being a mission-minded church, serving our local neighbors and expanding our reach globally to share the love of Christ.</p>
+            
+            <div class="mission-grid">
+                <div>
+                    <h3>🌍 Global Impact: Zimbabwe</h3>
+                    <p>Our congregation actively supports the international spreading of the Word and humanitarian aid. Most recently, our church family stepped out in faith to support a mission to Zimbabwe, bringing resources, physical aid, and the hope of Jesus to local communities.</p>
+                </div>
+                <div>
+                    <h3>💛 Community & Outreach</h3>
+                    <p>We will drop the details of your other local and regional missions right here as soon as you gather them from the pastor!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2025 Missions Funding Table -->
         <section class="content-section">
             <h2>2025 Missions & Ministry Funding</h2>
-            <p>Our commitment to missions remains a top priority. Below is the full breakdown of our 2025 funded ministries:</p>
             <div class="table-responsive">
                 <table class="table">
                     <thead>
-                        <tr>
-                            <th>Mission / Ministry</th>
-                            <th>Status</th>
-                            <th>Budgeted Amount</th>
-                        </tr>
+                        <tr><th>Mission / Ministry</th><th>Status</th><th>Budgeted Amount</th></tr>
                     </thead>
                     <tbody>
                         <tr><td>Cambodian Christian Arts (CCAM)</td><td>Fully Funded</td><td>$1,620.00</td></tr>
@@ -47,33 +62,22 @@
             </div>
         </section>
 
+        <!-- Forms -->
         <div class="forms-wrapper">
-            <!-- Visitor Connect Card -->
             <section class="form-card">
                 <h2>Visitor Connect Card</h2>
                 <form id="visitorForm">
                     <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
                     <div class="form-group"><label>Email *</label><input type="email" name="email" required class="form-control"></div>
                     <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
-                    <div class="form-group"><label>First time visiting?</label>
-                        <select name="isFirstTime" class="form-control">
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
-                        </select>
-                    </div>
+                    <div class="form-group"><label>First time visiting?</label><select name="isFirstTime" class="form-control"><option value="Yes">Yes</option><option value="No">No</option></select></div>
                     <div class="form-group"><label>How did you hear about us?</label><input type="text" name="howHeard" class="form-control"></div>
-                    <div class="form-group"><label>Preferred Contact Method</label>
-                        <select name="contactMethod" class="form-control">
-                            <option value="Email">Email</option>
-                            <option value="Phone">Phone</option>
-                        </select>
-                    </div>
+                    <div class="form-group"><label>Preferred Contact Method</label><select name="contactMethod" class="form-control"><option value="Email">Email</option><option value="Phone">Phone</option></select></div>
                     <div class="form-group"><label>Comments</label><textarea name="comments" class="form-control"></textarea></div>
                     <button type="submit" class="btn btn-primary">Submit Connect Card</button>
                 </form>
             </section>
 
-            <!-- Prayer Request Box -->
             <section class="form-card">
                 <h2>Prayer Request Box</h2>
                 <form id="prayerForm">
@@ -81,17 +85,11 @@
                     <div class="form-group"><label>Email *</label><input type="email" name="email" required class="form-control"></div>
                     <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
                     <div class="form-group"><label>Prayer Request *</label><textarea name="prayerRequest" required class="form-control"></textarea></div>
-                    <div class="form-group"><label>Keep Private?</label>
-                        <select name="isPrivate" class="form-control">
-                            <option value="No">No</option>
-                            <option value="Yes">Yes</option>
-                        </select>
-                    </div>
+                    <div class="form-group"><label>Keep Private?</label><select name="isPrivate" class="form-control"><option value="No">No</option><option value="Yes">Yes</option></select></div>
                     <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
                 </form>
             </section>
 
-            <!-- Donation Form -->
             <section class="form-card">
                 <h2>Make a Donation</h2>
                 <form id="donationForm">
@@ -103,13 +101,7 @@
                     <div class="form-group"><label>Zip</label><input type="text" name="zip" class="form-control"></div>
                     <div class="form-group"><label>Phone</label><input type="tel" name="phone" class="form-control"></div>
                     <div class="form-group"><label>Amount ($) *</label><input type="number" name="amount" required class="form-control"></div>
-                    <div class="form-group"><label>Fund/Mission *</label>
-                        <select name="fund" required class="form-control">
-                            <option value="General Fund">General Church Fund</option>
-                            <option value="CCAM">Cambodian Christian Arts (CCAM)</option>
-                            <option value="Food Pantry">Willing Workers Food Pantry</option>
-                        </select>
-                    </div>
+                    <div class="form-group"><label>Fund/Mission *</label><select name="fund" required class="form-control"><option value="General Fund">General Church Fund</option><option value="CCAM">Cambodian Christian Arts (CCAM)</option><option value="Food Pantry">Willing Workers Food Pantry</option></select></div>
                     <button type="submit" class="btn btn-primary">Submit Donation</button>
                 </form>
             </section>
@@ -117,26 +109,16 @@
     </main>
 
     <script>
-        // REPLACE WITH YOUR ACTUAL DEPLOYED WEB APP URL
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx71tGeQlOQrt2J-1Jw78pNKQvId1vzcK3IgcCKI26LAGqEDRNHy8MykL2cn2_1KSFO_A/exec';
-
+        const scriptURL = 'YOUR_DEPLOYED_WEB_APP_URL_HERE';
         function setupForm(id) {
             const form = document.getElementById(id);
             form.addEventListener('submit', e => {
                 e.preventDefault();
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    alert('Success! Your information has been submitted.');
-                    form.reset();
-                })
-                .catch(err => {
-                    console.error('Submission complete, but browser blocked return signal.');
-                    alert('Success! Your information has been submitted.');
-                    form.reset();
-                });
+                .then(() => { alert('Success!'); form.reset(); })
+                .catch(() => { alert('Success!'); form.reset(); });
             });
         }
-
         setupForm('visitorForm');
         setupForm('prayerForm');
         setupForm('donationForm');
