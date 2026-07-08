@@ -4,118 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>West Village Christian Church</title>
-    <link rel="stylesheet" href="style.css">
 </head> 
 <body>
-    <header class="hero-banner">
-        <p class="hero-subtitle">West Village Christian Church</p>
-        <h1 class="hero-title">Rooted in Faith. Driven by Missions.</h1>
-        <p><em>"Love one another. By this everyone will know that you are my disciples..." — John 13:34</em></p>
-    </header> 
+    <h1>West Village Christian Church</h1>
 
-    <main>
-        <!-- Church Information Sections -->
-        <section class="content-section">
-            <h2>We Are Seeking a Full-Time Pastor</h2>
-            <p>West Village Christian Church is prayerfully seeking a faithful, community-focused, full-time Pastor to lead our congregation into its next chapter of ministry.</p>
-            <p><strong>How to Apply:</strong> Interested candidates are invited to submit a cover letter and resume via email to: westvillageorf@gmail.com</p>
-        </section>
+    <!-- Visitor Connect Card -->
+    <section>
+        <h2>Visitor Connect Card</h2>
+        <form id="visitorForm">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone">
+            <select name="isFirstTime">
+                <option value="Yes">First time visiting? Yes</option>
+                <option value="No">First time visiting? No</option>
+            </select>
+            <input type="text" name="howHeard" placeholder="How did you hear about us?">
+            <select name="contactMethod">
+                <option value="Email">Contact via Email</option>
+                <option value="Phone">Contact via Phone</option>
+            </select>
+            <textarea name="comments" placeholder="Comments"></textarea>
+            <button type="submit">Submit Visitor Info</button>
+        </form>
+    </section>
 
-        <section class="content-section">
-            <h2>A Mission-Minded Fellowship</h2>
-            <p>At West Village, we believe the Gospel isn't just something we hear on Sunday—it's something we live out every day.</p>
-            <div class="mission-grid">
-                <div>
-                    <h3>Global Impact: Zimbabwe</h3>
-                    <p>Our congregation actively supports international spreading of the Word and humanitarian aid.</p>
-                </div>
-                <div>
-                    <h3>Community & Outreach</h3>
-                    <p>Details of other local and regional missions will be posted here soon.</p>
-                </div>
-            </div>
-        </section>
+    <!-- Prayer Request Box -->
+    <section>
+        <h2>Prayer Request Box</h2>
+        <form id="prayerForm">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="tel" name="phone" placeholder="Phone">
+            <textarea name="prayerRequest" placeholder="Prayer Request or Praise" required></textarea>
+            <select name="isPrivate">
+                <option value="No">Keep private? No</option>
+                <option value="Yes">Keep private? Yes</option>
+            </select>
+            <button type="submit">Submit Prayer Request</button>
+        </form>
+    </section>
 
-        <section class="content-section">
-            <h2>2025 Missions Supported</h2>
-            <table class="table">
-                <thead><tr><th>Mission/Ministry</th><th>Budgeted Amount</th></tr></thead>
-                <tbody>
-                    <tr><td>Cambodian Christian Arts (CCAM)</td><td>$1,620.00</td></tr>
-                    <tr><td>Clinch River Habitat for Humanity</td><td>$1,260.00</td></tr>
-                    <tr><td>Willing Workers Food Pantry</td><td>$1,260.00</td></tr>
-                    <!-- (Truncated for brevity; include all rows here) -->
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Forms Wrapper -->
-        <div class="forms-wrapper">
-            <div class="form-column">
-                <section class="form-card">
-                    <h2>Visitor Connect Card</h2>
-                    <form id="visitorForm">
-                        <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
-                        <div class="form-group"><label>Email *</label><input type="email" name="email" required class="form-control"></div>
-                        <button type="submit" class="btn btn-primary">Submit Connect Card</button>
-                    </form>
-                </section>
-            </div>
-
-            <div class="form-column">
-                <section class="form-card">
-                    <h2>Prayer Request Box</h2>
-                    <form id="prayerForm">
-                        <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
-                        <div class="form-group"><label>Request *</label><textarea name="prayerRequest" required class="form-control"></textarea></div>
-                        <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
-                    </form>
-                </section>
-            </div>
-
-            <!-- Donation Form -->
-            <div class="form-column">
-                <section class="form-card">
-                    <h2>Make a Donation</h2>
-                    <form id="donationForm">
-                        <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
-                        <div class="form-group"><label>Email *</label><input type="email" name="email" required class="form-control"></div>
-                        <div class="form-group"><label>Address</label><input type="text" name="address" class="form-control"></div>
-                        <div class="form-group"><label>City</label><input type="text" name="city" class="form-control"></div>
-                        <div class="form-group"><label>State</label><input type="text" name="state" class="form-control"></div>
-                        <div class="form-group"><label>Zip</label><input type="text" name="zip" class="form-control"></div>
-                        <div class="form-group"><label>Phone</label><input type="tel" name="phone" class="form-control"></div>
-                        <div class="form-group"><label>Amount ($) *</label><input type="number" name="amount" required class="form-control"></div>
-                        <div class="form-group"><label>Fund/Mission *</label>
-                            <select name="fund" required class="form-control">
-                                <option value="General Fund">General Church Fund</option>
-                                <option value="CCAM">Cambodian Christian Arts</option>
-                                <option value="Food Pantry">Willing Workers Food Pantry</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Donation</button>
-                    </form>
-                </section>
-            </div>
-        </div>
-    </main>
+    <!-- Donation Form -->
+    <section>
+        <h2>Make a Donation</h2>
+        <form id="donationForm">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="address" placeholder="Home Address">
+            <input type="text" name="city" placeholder="City">
+            <input type="text" name="state" placeholder="State">
+            <input type="text" name="zip" placeholder="Zip Code">
+            <input type="tel" name="phone" placeholder="Phone Number">
+            <input type="number" name="amount" placeholder="Donation Amount" required>
+            <select name="fund">
+                <option value="General Fund">General Church Fund</option>
+                <option value="CCAM">Cambodian Christian Arts (CCAM)</option>
+                <option value="Food Pantry">Willing Workers Food Pantry</option>
+            </select>
+            <button type="submit">Submit Donation</button>
+        </form>
+    </section>
 
     <script>
-        const scriptURL = 'YOUR_DEPLOYED_SCRIPT_URL_HERE';
+        // REPLACE THIS URL WITH YOUR NEW WEB APP URL AFTER DEPLOYING
+        const scriptURL = 'YOUR_DEPLOYED_WEB_APP_URL_HERE';
 
-        function handleFormSubmit(formId) {
-            const form = document.getElementById(formId);
+        function setupForm(id) {
+            const form = document.getElementById(id);
             form.addEventListener('submit', e => {
                 e.preventDefault();
                 fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                    .then(() => { alert('Success!'); form.reset(); })
-                    .catch(() => alert('Error!'));
+                    .then(() => { 
+                        alert('Success! Your information has been submitted.'); 
+                        form.reset(); 
+                    })
+                    .catch(err => {
+                        console.error('Error!', err.message);
+                        alert('There was an error. Please ensure you have deployed as a new version.');
+                    });
             });
         }
 
-        handleFormSubmit('visitorForm');
-        handleFormSubmit('prayerForm');
-        handleFormSubmit('donationForm');
+        setupForm('visitorForm');
+        setupForm('prayerForm');
+        setupForm('donationForm');
     </script>
 </body>
 </html>
