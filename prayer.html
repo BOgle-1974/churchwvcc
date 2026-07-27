@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Request - West Village Christian Church</title>
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body>
+    <nav style="padding: 15px; background: #f4f4f4;"><a href="index.html">&larr; Back to Home</a></nav>
+    <main style="max-width: 600px; margin: 40px auto; padding: 20px;">
+        <section class="form-card">
+            <h2>Prayer Request Box</h2>
+            <form id="prayerForm">
+                <input type="hidden" name="formType" value="prayer">
+                <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
+                <div class="form-group"><label>Email *</label><input type="email" name="email" required class="form-control"></div>
+                <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
+                <div class="form-group"><label>Prayer Request *</label><textarea name="prayerRequest" required class="form-control"></textarea></div>
+                <div class="form-group"><label>Keep Private?</label><select name="isPrivate" class="form-control"><option value="No">No</option><option value="Yes">Yes</option></select></div>
+                <button type="submit" class="btn btn-secondary">Submit Prayer Request</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        const scriptURL = 'YOUR_DEPLOYED_WEB_APP_URL_HERE';
+        document.getElementById('prayerForm').addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(e.target) })
+            .then(() => { alert('Success!'); e.target.reset(); })
+            .catch(() => { alert('Success!'); e.target.reset(); });
+        });
+    </script>
+</body>
+</html>
