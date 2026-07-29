@@ -1,17 +1,3 @@
-/* --- Base Theme & Reset --- */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333333;
-    background-color: #f8fafc;
-}
-
 /* --- Header & Navigation --- */
 header {
     background-color: #2b4c7e;
@@ -43,66 +29,4 @@ nav a {
 
 nav a:hover {
     background-color: #556b2f;
-}
-
-/* --- Main Content Layout --- */
-main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-h2 {
-    color: #2b4c7e;
-    margin-bottom: 15px;
-}
-
-p {
-    margin-bottom: 20px;
-}
-
-/* --- Footer --- */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #666666;
-    font-size: 0.9rem;
-    margin-top: 40px;
-}
-
-/* --- Video and Archive Styling --- */
-.video-container {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-    max-width: 100%;
-}
-
-.video-container iframe {
-    max-width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.archive-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 25px;
-}
-
-.archive-item {
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
-}
-
-.archive-item h3 {
-    margin-top: 0;
-    color: #2b4c7e;
 }
