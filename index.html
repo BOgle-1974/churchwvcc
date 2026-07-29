@@ -7,40 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>West Village Christian Church</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="livestream.html">Live Stream</a>
-            <a href="archive.html">Sermon Archive</a>
-            <a href="prayer.html">Prayer</a>
-            <a href="donate.html">Donate</a>
-            <a href="visitor.html">Visitor Info</a>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="logo-area">
+            <h1>West Village Christian Church</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="livestream.html">Live Stream</a></li>
+                <li><a href="archive.html">Sermon Archive</a></li>
+                <li><a href="prayer.html">Prayer</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="visitor.html">Visitor Info</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Welcome to Our Church</h2>
-        <p>We are so glad you are here. Join us for worship, fellowship, and growing in faith together.</p>
+    <!-- Main Content Area -->
+    <main class="container">
+        <section class="hero">
+            <h2>Welcome to Our Community</h2>
+            <p>Gathering together in faith, worship, and fellowship. We are so glad you are here.</p>
+        </section>
 
-        <!-- Quick Access Action Cards -->
-        <div class="home-actions" style="margin: 30px 0; display: flex; gap: 20px; flex-wrap: wrap;">
-            <div class="action-card" style="border: 1px solid #ccc; padding: 20px; border-radius: 5px; flex: 1; min-width: 250px;">
-                <h3>Watch Live</h3>
-                <p>Tune into our current Sunday service or live stream broadcast.</p>
-                <a href="livestream.html" class="button" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background: #0066cc; color: white; text-decoration: none; border-radius: 3px;">Go to Live Stream</a>
+        <section class="action-grid">
+            <div class="card">
+                <h3>Join Us Live</h3>
+                <p>Watch our services live every Sunday morning.</p>
+                <a href="livestream.html" class="btn">Watch Live</a>
             </div>
-
-            <div class="action-card" style="border: 1px solid #ccc; padding: 20px; border-radius: 5px; flex: 1; min-width: 250px;">
+            <div class="card">
                 <h3>Sermon Archive</h3>
-                <p>Catch up on our three most recent messages and past services.</p>
-                <a href="archive.html" class="button" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background: #0066cc; color: white; text-decoration: none; border-radius: 3px;">View Archives</a>
+                <p>Catch up on recent messages and teachings.</p>
+                <a href="archive.html" class="btn">Browse Sermons</a>
             </div>
-        </div>
+            <div class="card">
+                <h3>Plan a Visit</h3>
+                <p>Find service times, directions, and what to expect.</p>
+                <a href="visitor.html" class="btn">Visitor Info</a>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; West Village Christian Church</p>
+        <p>&copy; 2026 West Village Christian Church. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
