@@ -7,26 +7,57 @@ body {
     color: #333;
 }
 
-/* Header & Navigation */
-.hero-banner {
-    background-color: #003366;
-    color: white;
+/* Top Navigation Bar */
+.top-nav {
+    background-color: #ffffff;
     text-align: center;
-    padding: 40px 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.site-nav a {
+.top-nav a {
     color: #003366;
     text-decoration: none;
     font-weight: bold;
     margin: 0 15px;
+    font-size: 15px;
 }
 
-.site-nav a:hover {
+.top-nav a:hover {
     text-decoration: underline;
 }
 
-/* Form Container Card Styling */
+/* Hero Banner Section */
+.hero-banner {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-banner h3 {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #cccccc;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-banner h1 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero-banner p {
+    font-style: italic;
+    color: #dddddd;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Form Container Card Styling (Scoped so it only affects forms inside this container) */
 .form-container {
     max-width: 600px;
     margin: 40px auto;
@@ -43,8 +74,8 @@ body {
     margin-bottom: 20px;
 }
 
-/* Form Fields Layout */
-form label {
+/* Scoped Form Fields Layout */
+.form-container form label {
     display: block;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -52,11 +83,11 @@ form label {
     color: #444;
 }
 
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"],
-form select,
-form textarea {
+.form-container form input[type="text"],
+.form-container form input[type="email"],
+.form-container form input[type="tel"],
+.form-container form select,
+.form-container form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -65,7 +96,7 @@ form textarea {
     font-size: 14px;
 }
 
-form textarea {
+.form-container form textarea {
     resize: vertical;
     height: 100px;
 }
