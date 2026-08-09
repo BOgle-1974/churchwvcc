@@ -5,32 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visitor Connect Card - West Village Christian Church</title>
     <link rel="stylesheet" href="style.css">
-</head> 
+</head>
 <body>
-    <nav style="padding: 15px; background: #f4f4f4;"><a href="index.html">&larr; Back to Home</a></nav>
-    <main style="max-width: 600px; margin: 40px auto; padding: 20px;">
-        <section class="form-card">
-            <h2>Visitor Connect Card</h2>
-            <form id="visitorForm">
-                <input type="hidden" name="formType" value="visitor">
-                <div class="form-group"><label>Full Name *</label><input type="text" name="fullName" required class="form-control"></div>
-                <div class="form-group"><label>Email *</label><input type="email" name="email" required class="form-control"></div>
-                <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control"></div>
-                <div class="form-group"><label>First time visiting?</label><select name="isFirstTime" class="form-control"><option value="Yes">Yes</option><option value="No">No</option></select></div>
-                <div class="form-group"><label>How did you hear about us?</label><input type="text" name="howHeard" class="form-control"></div>
-                <div class="form-group"><label>Preferred Contact Method</label><select name="contactMethod" class="form-control"><option value="Email">Email</option><option value="Phone">Phone</option></select></div>
-                <div class="form-group"><label>Comments</label><textarea name="comments" class="form-control"></textarea></div>
-                <button type="submit" class="btn btn-primary">Submit Connect Card</button>
-            </form>
-        </section>
-    </main>
+    <!-- Top Navigation Bar -->
+    <nav class="site-nav" style="text-align: center; padding: 15px; background: #f4f4f4; border-bottom: 1px solid #ddd;">
+        <a href="index.html">Home</a> | 
+        <a href="visitor.html">Visitor Connect</a> | 
+        <a href="prayer.html">Prayer Requests</a> | 
+        <a href="donate.html">Donate</a>
+    </nav>
+
+    <div class="form-container">
+        <h2>Visitor Connect Card</h2>
+        <form id="visitorForm">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="firstTime">First time visiting?</label>
+            <select id="firstTime" name="firstTime">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="hearAbout">How did you hear about us?</label>
+            <input type="text" id="hearAbout" name="hearAbout">
+
+            <label for="contactMethod">Preferred Contact Method</label>
+            <select id="contactMethod" name="contactMethod">
+                <option value="Email">Email</option>
+                <option value="Phone">Phone</option>
+                <option value="Text">Text</option>
+            </select>
+
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments"></textarea>
+
+            <button type="submit" class="submit-btn-visitor">Submit Connect Card</button>
+        </form>
+    </div>
+
+    <a href="index.html" class="back-link">&larr; Back to Home</a>
+
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbx71tGeQlOQrt2J-1Jw78pNKQvId1vzcK3IgcCKI26LAGqEDRNHy8MykL2cn2_1KSFO_A/exec';
-        document.getElementById('visitorForm').addEventListener('submit', e => {
+        const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+        const form = document.getElementById('visitorForm');
+
+        form.addEventListener('submit', e => {
             e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(e.target) })
-            .then(() => { alert('Success!'); e.target.reset(); })
-            .catch(() => { alert('Success!'); e.target.reset(); });
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    alert('Thank you! Your visitor connect card has been submitted.');
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
         });
     </script>
 </body>
