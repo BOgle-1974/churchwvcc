@@ -72,7 +72,7 @@
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
                     alert('Thank you! Your visitor connect card has been submitted.');
-                    form.reset();
+                    form.reset(); //This line clears the form
                 })
                 .catch(error => console.error('Error!', error.message));
         });
